@@ -1,0 +1,22 @@
+<!-- catatan.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Catatan Pelanggaran
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Tampilkan daftar catatan pelanggaran -->
+  <ion-list>
+    <ion-item *ngFor="let catatan of catatanList">
+      {{ catatan.nama }} - {{ catatan.keterangan }}
+      <ion-button slot="end" (click)="editCatatan(catatan)">Edit</ion-button>
+      <ion-button slot="end" (click)="hapusCatatan(catatan)">Hapus</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tombol untuk menambah catatan -->
+  <ion-button expand="full" (click)="tambahCatatan()">Tambah Catatan</ion-button>
+</ion-content>

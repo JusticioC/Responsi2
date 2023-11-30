@@ -1,0 +1,23 @@
+<!-- login.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input [(ngModel)]="username" name="username" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
+  </ion-item>
+
+  <!-- Perubahan di baris berikut -->
+  <ion-button expand="full" (click)="handleLogin()">Login</ion-button>
+</ion-content>
